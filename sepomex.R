@@ -5,6 +5,10 @@ library(rgeos)
 library(raster)
 library(data.table)
 
+# Este código clasifica manzanas por CP de dos formas.
+# El primero genrea código postales asignados a los polígonos de colonias del INE.
+# En el segundo se le asigna a cada manzana el CP reportado en el DENUE con mayor frecuencia en la colonia.
+
 ## Importar codigo y coordenadas de manzanas:
 manz   <- fread("centroides_manzanas_2016.csv")
 tlmanz <- manz[substr(manz$cvegeo, 1, 2) == "29",]
