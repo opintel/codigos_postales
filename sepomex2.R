@@ -5,6 +5,12 @@ library(rgeos)
 library(raster)
 library(kknn)
 
+# Este es un modelo predictivo. 
+# El Cp asignado a cada manzana considera los reportes del DENUE, RUV e INE. Proceso diferente para manzanas antiguas y nuevas.
+
+
+
+
 # Importar codigo y coordenadas de manzanas:
 manz   <- fread("centroides_manzanas_2016.csv")
 tlmanz <- manz[substr(manz$cvegeo, 1, 2) == "29",]
