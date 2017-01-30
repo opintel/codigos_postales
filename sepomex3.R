@@ -7,6 +7,10 @@ library(stringdist)
 library(stringi)
 library(data.table)
 
+
+# Este metodo asigna Códigos Postales a cada colonia según polígono del INE y el CP de SEPOMEX.
+# En caso de no encontrar una clara relación del nombre de la colonia en la tabla de SEPOMEX, el metodo mantiene el CP del INE.
+
 # Importar codigo y coordenadas de manzanas:
 manz   <- fread("centroides_manzanas_2016.csv")
 tlmanz <- manz[substr(manz$cvegeo, 1, 2) == "29",]
