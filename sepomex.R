@@ -5,8 +5,6 @@ library(rgeos)
 library(raster)
 library(data.table)
 
-## Este es el codigo de la clasificacion base y asume tres archivos:
-
 ## Importar codigo y coordenadas de manzanas:
 manz   <- fread("centroides_manzanas_2016.csv")
 tlmanz <- manz[substr(manz$cvegeo, 1, 2) == "29",]
